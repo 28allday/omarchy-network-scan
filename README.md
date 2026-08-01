@@ -7,13 +7,6 @@ plus a list of your Tailscale peers. A bar icon and a keyboard-driven panel.
 No agent, no daemon, no account, no `nmap`, no `sudo`. Nothing runs while the
 panel is closed.
 
-Under the title it renders a verdict on your hardware choices:
-
-```
-I see Mac/Windows boxes on this network … you have made some poor life choices
-100% Linux on this network — you're golden
-```
-
 ## What it shows
 
 **Local network** — one line per device, grouped by what the device is, with
@@ -211,8 +204,9 @@ Symlink a checkout so edits are live:
 ```bash
 git clone https://github.com/28allday/omarchy-network-scan.git
 ln -s "$PWD/omarchy-network-scan" ~/.config/omarchy/plugins/nosignal.network-scan
-omarchy-shell shell rescanPlugins            # before enable — a fresh symlink is
-omarchy plugin enable nosignal.network-scan  # unknown to the running shell
+# a fresh symlink is unknown to the running shell, so rescan before enabling
+omarchy-shell shell rescanPlugins
+omarchy plugin enable nosignal.network-scan
 ```
 
 Run `omarchy-restart-shell` after any QML change; a plain rescan serves a stale
