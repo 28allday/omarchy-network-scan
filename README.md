@@ -12,24 +12,15 @@ panel is closed.
 **Local network** — one line per device, grouped by what the device is, with
 computers first:
 
-```
-Computers 4
-   workstation     This machine          192.168.1.20   you
-   studio-mac      Mac                   192.168.1.31   open
-   media           Jellyfin server       192.168.1.40   open…
-   vault           File share            192.168.1.41   open
-Network 2
-   gateway         Router / gateway      192.168.1.1    gateway
-   Network gear                          192.168.1.12   open…
-Printers & cameras 1
-   BRW3C2AF4       Printer               192.168.1.50
-```
+![The panel: devices grouped by type, with a Tailscale section below](docs/panel.png)
 
 Groups are Computers, Network, Storage, Media, Smart home, Printers & cameras,
 Phones & tablets, and Other. Empty groups are omitted, this machine heads
 Computers, and within a group devices are ordered by address.
 
 Press **`e`** and every row expands with the rest:
+
+![Every row expanded, showing OS, vendor, ports, mDNS services and MAC](docs/detail.png)
 
 | Field | |
 |-------|--|
@@ -98,6 +89,8 @@ out of reach without root.
 | `y` | copy the selected address to the clipboard |
 | `r` / `F5` | rescan |
 | `Esc` / `q` / click-outside | close |
+
+![Choosing between a device's web UI and SSH](docs/actions.png)
 
 `↵` acts when there's something to act on, and asks when there's more than one
 way in. A device serving both a web UI and SSH raises a chooser listing every web
