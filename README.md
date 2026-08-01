@@ -197,27 +197,6 @@ Bind a key in `~/.config/hypr/bindings.lua`:
 o.bind("SUPER + ALT + N", "My network", "omarchy-shell shell toggle nosignal.network-scan")
 ```
 
-## Development
-
-Symlink a checkout so edits are live:
-
-```bash
-git clone https://github.com/28allday/omarchy-network-scan.git
-ln -s "$PWD/omarchy-network-scan" ~/.config/omarchy/plugins/nosignal.network-scan
-# a fresh symlink is unknown to the running shell, so rescan before enabling
-omarchy-shell shell rescanPlugins
-omarchy plugin enable nosignal.network-scan
-```
-
-Run `omarchy-restart-shell` after any QML change; a plain rescan serves a stale
-component cache.
-
-```bash
-shellcheck -s sh scan.sh
-qmllint Panel.qml
-omarchy plugin validate .
-```
-
 ## Licence
 
 MIT — see [LICENSE](LICENSE).
