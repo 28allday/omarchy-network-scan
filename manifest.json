@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "nosignal.network-scan",
   "name": "My Network",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Gavin Nugent",
   "license": "MIT",
   "description": "Scans the local subnet and identifies every device on it: name, vendor, model and role inferred from mDNS, MAC vendor and open ports, plus a Tailscale peer list. Summon with: omarchy-shell shell toggle nosignal.network-scan",
